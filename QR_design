@@ -1,1 +1,84 @@
+import numpy as np
+
+# 21x21 Version 1 QR Code (dummy example)
+# 0 = white, 1 = black
+# This would normally come from image processing step
+qr_matrix = np.random.randint(0, 2, (21, 21))
+
+# Function patterns and fixed modules mask
+def is_function_module(row, col):
+    # Finder patterns
+    if (row < 9 and col < 9) or \
+       (row < 9 and col >= 21 - 8) or \
+       (row >= 21 - 8 and col < 9):
+        return True
+    # Timing pattern
+    if row == 6 or col == 6:
+        return True
+    # Format info locations
+    if (row == 8 and col < 9) or (col == 8 and row < 9):
+        return True
+    if (row == 8 and col >= 21 - 8) or (col == 8 and row >= 21 - 8):
+        return True
+    return False
+
+# Dummy format info parser (returning mask pattern = 0)
+def extract_format_info(matrix):
+    # For now, just return hardcoded mask pattern 0
+    return 0  # Can be replaced with full format info extraction logic
+
+# Apply mask pattern
+def apply_mask(matrix, mask_pattern):
+    def mask_func(r, c):
+        if mask_pattern == 0:
+            return (r + c) % 2 == 0
+        # Add other patterns if needed
+        return False
+
+    masked = matrix.copy()
+    for r in range(21):
+        for c in range(21):
+            if not is_function_module(r, c) and mask_func(r, c):
+                masked[r][c] ^= 1
+    return masked
+
+# Zigzag scan for codeword extraction
+def extract_codewords(matrix):
+    r = 20
+    c = 20
+    codewords = []
+    bit_buffer = 0
+    bit_count = 0
+
+    def append_bit(bit):
+        nonlocal bit_buffer, bit_count, codewords
+        bit_buffer = (bit_buffer << 1) | bit
+        bit_count += 1
+        if bit_count == 8:
+            codewords.append(bit_buffer)
+            bit_buffer = 0
+            bit_count = 0
+
+    going_up = True
+    while c > 0:
+        if c == 6:  # Skip vertical timing pattern
+            c -= 1
+        for i in range(21):
+            row = r - i if going_up else i
+            if 0 <= row < 21:
+                for offset in [0, -1]:
+                    col = c + offset
+                    if not is_function_module(row, col):
+                        append_bit(matrix[row][col])
+        c -= 2
+        going_up = not going_up
+
+    return codewords
+
+# === MAIN ===
+mask_pattern = extract_format_info(qr_matrix)
+unmasked = apply_mask(qr_matrix, mask_pattern)
+codewords = extract_codewords(unmasked)
+
+print("Decoded codewords (raw):", codewords)
 
