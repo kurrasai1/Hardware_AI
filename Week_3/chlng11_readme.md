@@ -36,7 +36,7 @@ Where:
 
 ## 🚀 GPU Acceleration with CuPy
 
-[**CuPy**](https://cupy.dev/) is a GPU-backed drop-in replacement for NumPy. By using CuPy, we can:
+[**CuPy**] is a GPU-backed drop-in replacement for NumPy. By using CuPy, we can:
 - Move the Q-table to GPU memory.
 - Perform matrix operations (e.g., `argmax`, `max`, arithmetic) on GPU.
 - Achieve **significant speedups** in training time for large numbers of episodes.
@@ -67,24 +67,9 @@ Where:
 
 ---
 
-## 📂 Files
-
-- `frozenlake_cpu.py` – Original CPU-based implementation using NumPy
-- `frozenlake_gpu.py` – Optimized GPU version using CuPy
-- `benchmark_results.txt` – Raw timings and comparison
-
----
-
 ## 📦 Requirements
 
 - Python 3.7+
 - OpenAI Gym
 - CuPy (for GPU version)
 - NumPy
-
-### 🔧 Installation
-
-```bash
-pip install gym
-pip install cupy
-
