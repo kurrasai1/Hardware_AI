@@ -21,6 +21,9 @@ The project includes the following software modules:
 - **`postprocess.py`**: Handles the visualization of output images and parsing of hardware results.
 - **`decode_qr.py`**: Decodes QR codes from images using the `pyzbar` library.
 
+**`Example QR Code`**
+- python software/preprocess.py input/test_qr.png
+
 ### Requirements
 
 To run this project, I have used the following Python libraries:
