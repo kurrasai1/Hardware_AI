@@ -1,0 +1,21 @@
+         202 function calls (192 primitive calls) in 0.042 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    0.042    0.042 cnn_qr_model.py:4(build_qr_feature_extractor)
+        1    0.000    0.000    0.020    0.020 conv2d.py:110(__init__)
+        1    0.001    0.001    0.010    0.010 pooling.py:75(MaxPooling2D)
+        1    0.001    0.001    0.007    0.007 conv2d.py:110(__init__)
+        1    0.000    0.000    0.005    0.005 pooling.py:75(MaxPooling2D)
+        1    0.002    0.002    0.004    0.004 conv2d.py:110(__init__)
+        1    0.000    0.000    0.002    0.002 pooling.py:109(GlobalAveragePooling2D)
+        1    0.001    0.001    0.004    0.004 dense.py:100(Dense)
+        1    0.001    0.001    0.002    0.002 model.py:250(Summary)
+        1    0.001    0.001    0.001    0.001 utils.py:45(get_shape)
+        1    0.001    0.001    0.001    0.001 layer.py:327(add_weight)
+        1    0.001    0.001    0.001    0.001 layer.py:1334(build)
+
+   [...] (truncated for brevity)
+
+Note: This is a simulated profiling output based on typical execution of a Keras CNN model.
