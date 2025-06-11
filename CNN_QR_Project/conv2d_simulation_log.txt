@@ -1,0 +1,39 @@
+--- Test Case #1 ---
+Input Window:
+[[10 20 30]
+ [40 50 60]
+ [70 80 90]]
+Convolution Result: 80
+Valid Out: 1
+
+--- Test Case #2 ---
+Input Window:
+[[  0   0   0]
+ [  0 255   0]
+ [  0   0   0]]
+Convolution Result: 0
+Valid Out: 1
+
+--- Test Case #3 ---
+Input Window:
+[[100 100 100]
+ [ 50  50  50]
+ [  0   0   0]]
+Convolution Result: 0
+Valid Out: 1
+
+--- Test Case #4 ---
+Input Window:
+[[255 255 255]
+ [255 255 255]
+ [255 255 255]]
+Convolution Result: 0
+Valid Out: 1
+
+--- Test Case #5 ---
+Input Window:
+[[3 1 4]
+ [1 5 9]
+ [2 6 5]]
+Convolution Result: 20
+Valid Out: 1
