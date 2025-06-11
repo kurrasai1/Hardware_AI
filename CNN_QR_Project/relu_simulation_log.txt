@@ -1,0 +1,49 @@
+--- ReLU Test Case #1 ---
+Input  = -50
+Output = 0
+valid_out = 1
+
+--- ReLU Test Case #2 ---
+Input  = 0
+Output = 0
+valid_out = 1
+
+--- ReLU Test Case #3 ---
+Input  = 12
+Output = 12
+valid_out = 1
+
+--- ReLU Test Case #4 ---
+Input  = -1
+Output = 0
+valid_out = 1
+
+--- ReLU Test Case #5 ---
+Input  = 100
+Output = 100
+valid_out = 1
+
+--- ReLU Test Case #6 ---
+Input  = -300
+Output = 0
+valid_out = 1
+
+--- ReLU Test Case #7 ---
+Input  = 255
+Output = 255
+valid_out = 1
+
+--- ReLU Test Case #8 ---
+Input  = -128
+Output = 0
+valid_out = 1
+
+--- ReLU Test Case #9 ---
+Input  = 64
+Output = 64
+valid_out = 1
+
+--- ReLU Test Case #10 ---
+Input  = -999
+Output = 0
+valid_out = 1
