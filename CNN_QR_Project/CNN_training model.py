@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 
 # Load your QR code dataset (for example, QR code images and their labels)
 # This part assumes you have a dataset of QR codes. If you don't have a dataset, 
-# you can use OpenCV or any tool to generate QR codes programmatically.
+# you can use OpenCV or any tool to generate QR codes programmaticaly.
 
 def load_dataset(data_dir):
     images = []
