@@ -67,7 +67,7 @@ module test_cnn_top_tb;
 
         #20;
 
-        $display("Final Pooled Output = %0d", pooled_out);
+        $display("The Final Pooled Output = %0d", pooled_out);
 
         #10;
         $finish;
