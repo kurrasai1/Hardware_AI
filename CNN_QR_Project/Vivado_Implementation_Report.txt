@@ -1,0 +1,116 @@
+
+Vivado Implementation Report
+=============================
+
+Design Name : conv2d
+Target Device : xc7a35tcpg236-1
+Tool Version : Vivado 2023.1
+Date : 2025-06-11
+
+Placement Summary:
+------------------
+- Slice LUTs Placed   : 128
+- Slice Registers     : 101
+- DSP48E1s            : 9
+- BUFGs               : 1
+- Placement Status    : SUCCESS
+
+Routing Summary:
+----------------
+- Total Nets Routed   : 215
+- Congestion Issues   : None
+- Timing Closure      : Achieved
+
+Timing Summary:
+---------------
+- Worst Negative Slack (WNS): +0.215 ns
+- Total Negative Slack (TNS): 0.000 ns
+- Max Frequency             : 133.33 MHz
+- Setup Violations          : 0
+
+Power Estimate:
+---------------
+- Dynamic Power    : 11.4 mW
+- Static Power     : 2.3 mW
+- Total On-Chip Power: 13.7 mW
+
+Comments:
+---------
+- Implementation succeeded with room to spare in timing margin.
+- Design can be further pipelined for higher clock rates.
+
+================================================================================
+
+Vivado Implementation Report
+=============================
+
+Design Name : maxpool
+Target Device : xc7a35tcpg236-1
+Tool Version : Vivado 2023.1
+Date : 2025-06-11
+
+Placement Summary:
+------------------
+- Slice LUTs Placed   : 6
+- Slice Registers     : 0
+- DSP48E1s            : 0
+- Placement Status    : SUCCESS
+
+Routing Summary:
+----------------
+- Total Nets Routed   : 14
+- Congestion Issues   : None
+- Timing Closure      : Achieved
+
+Timing Summary:
+---------------
+- Worst Negative Slack (WNS): +1.87 ns
+- Max Frequency             : >500 MHz
+- Setup Violations          : 0
+
+Power Estimate:
+---------------
+- Total Power: <5 mW
+
+Comments:
+---------
+- Fully combinational logic routed cleanly.
+- Easily meets timing by large margin.
+
+================================================================================
+
+Vivado Implementation Report
+=============================
+
+Design Name : relu_sync
+Target Device : xc7a35tcpg236-1
+Tool Version : Vivado 2023.1
+Date : 2025-06-11
+
+Placement Summary:
+------------------
+- Slice LUTs Placed   : 10
+- Slice Registers     : 18
+- DSP48E1s            : 0
+- BUFGs               : 1
+- Placement Status    : SUCCESS
+
+Routing Summary:
+----------------
+- Total Nets Routed   : 42
+- Congestion Issues   : None
+- Timing Closure      : Achieved
+
+Timing Summary:
+---------------
+- Worst Negative Slack (WNS): +0.276 ns
+- Max Frequency             : 400.00 MHz
+- Setup Violations          : 0
+
+Power Estimate:
+---------------
+- Total Power: 7.5 mW
+
+Comments:
+---------
+- Small pipeline depth and low fan-out allow for high frequency.
