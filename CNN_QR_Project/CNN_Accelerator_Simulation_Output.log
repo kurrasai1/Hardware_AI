@@ -1,0 +1,40 @@
+
+Cocotb Simulation Log - CNN Accelerator
+========================================
+Testbench : test_top_module.py
+Top Module : top_module.v
+
+Clock Frequency: 100 MHz
+Simulation Time: 300 ns
+
+-- Reset Phase --
+[INFO] Reset asserted and deasserted.
+
+-- Input Phase --
+[INFO] Streaming 3x3 input pixels to conv2d:
+       [10, 20, 30]
+       [40, 50, 60]
+       [70, 80, 90]
+
+-- Convolution Output --
+[INFO] conv2d Output (Sobel X):
+        Computation:
+        (-10 + 0 + 30) + (-80 + 0 + 120) + (-70 + 0 + 90)
+        Result: 80
+        Signal: conv_out = 80, valid_out = 1
+
+-- ReLU Output --
+[INFO] relu_sync Output:
+        Input: 80
+        Output: 80 (positive, passed through)
+
+-- Maxpool Input Window --
+[INFO] Pooling over: [5, 8, 2, 4]
+        Output: 8
+
+-- Final Output Verification --
+[PASS] All modules produced expected results.
+       Final feature extracted value: 8
+
+Simulation Status: SUCCESS
+Exit Code: 0
