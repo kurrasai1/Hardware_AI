@@ -1,0 +1,20 @@
+TOPLEVEL_LANG = verilog
+
+# RTL Sources
+VERILOG_SOURCES = ../rtl/conv2d.v \
+                  ../rtl/maxpool.v \
+                  ../rtl/relu_sync.v \
+                  ../rtl/top_module.v
+
+TOPLEVEL = top_module
+MODULE = test_top_module
+
+# Use icarus
+SIM = icarus
+COMPILE_ARGS += -g2012
+
+# Optional: Enable waveform generation
+WAVES = 1
+
+# Cocotb standard makefile include
+include $(shell cocotb-config --makefiles)/Makefile.sim
