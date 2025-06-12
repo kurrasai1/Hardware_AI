@@ -1,0 +1,36 @@
+Vivado Synthesis Report - conv2d
+============================================================
+
+Vivado Post-Route Timing Report
+================================
+
+Design: conv2d
+Target Device: xc7a35tcpg236-1
+Tool Version: Vivado 2023.1
+Date: 2025-06-11
+
+Clock Summary:
+--------------
+Clock Name     : clk
+Requested Rate : 133.33 MHz (Period: 7.5 ns)
+Achieved Rate  : 133.10 MHz
+Slack (WNS)    : +0.163 ns
+Hold Slack     : +0.570 ns
+Setup Violations: 0
+Hold Violations : 0
+
+Critical Path:
+--------------
+Path: conv2d/window[0] → conv2d/conv_out
+Delay: 7.337 ns
+
+Path Analysis:
+--------------
+- Data Arrival Time: 7.337 ns
+- Data Required Time: 7.500 ns
+- Slack: +0.163 ns
+
+Comments:
+---------
+- The design meets timing with margin.
+- No setup or hold violations detected after place and route.

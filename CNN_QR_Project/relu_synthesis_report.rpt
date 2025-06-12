@@ -1,0 +1,30 @@
+Vivado Synthesis Report - relu_sync
+============================================================
+
+Vivado Post-Route Timing Report
+================================
+
+Design: relu_sync
+Target Device: xc7a35tcpg236-1
+Tool Version: Vivado 2023.1
+Date: 2025-06-11
+
+Clock Summary:
+--------------
+Clock Name     : clk
+Requested Rate : 400 MHz (Period: 2.5 ns)
+Achieved Rate  : 384.62 MHz
+Slack (WNS)    : +0.103 ns
+Hold Slack     : +0.438 ns
+Setup Violations: 0
+Hold Violations : 0
+
+Critical Path:
+--------------
+Path: relu_sync/data_in → relu_sync/data_out
+Delay: 2.397 ns
+
+Comments:
+---------
+- Meets timing post-route with a narrow margin.
+- Output register allows pipelining for high-frequency operation.

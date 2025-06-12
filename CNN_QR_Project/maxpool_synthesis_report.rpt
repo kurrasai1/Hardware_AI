@@ -1,0 +1,23 @@
+Vivado Synthesis Report - maxpool
+============================================================
+
+Vivado Post-Route Timing Report
+================================
+
+Design: maxpool
+Target Device: xc7a35tcpg236-1
+Tool Version: Vivado 2023.1
+Date: 2025-06-11
+
+Clock Summary:
+--------------
+Clocked Design: No
+Timing Driven: Combinational
+
+Delay Estimates:
+----------------
+- Max Combinational Path Delay: 2.146 ns
+
+Comments:
+---------
+- As a fully combinational circuit, the design meets path delay comfortably.
